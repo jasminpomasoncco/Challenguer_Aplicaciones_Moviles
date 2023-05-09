@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class ViewListado : AppCompatActivity() {
 
@@ -23,9 +24,15 @@ class ViewListado : AppCompatActivity() {
 
         GlobalScope.launch(Dispatchers.IO){
             Lista=appDb.postDao().getAll()
+
+            withContext(Dispatchers.Main){
+                recycler.layoutManager=LinearLayoutManager(applicationContext)
+                recycler.adapter=Adapter(Lista)
+            }
+
         }
 
-        recycler.layoutManager=LinearLayoutManager(applicationContext)
-        recycler.adapter=Adapter(Lista)
+
+
     }
 }

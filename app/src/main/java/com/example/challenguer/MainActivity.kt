@@ -61,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         btnList.setOnClickListener(){
             val intent=Intent(this, ViewListado::class.java)
             startActivity(intent)
+           // if(s)
         }
     }
 
