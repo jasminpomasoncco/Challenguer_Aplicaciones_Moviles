@@ -35,6 +35,26 @@ app:cardElevation="10dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtbody"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Update Post"
+                    android:id="@+id/btnUpdate"
+                    />
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Post"
+                    android:id="@+id/btnDelete"
+                    />
+            </LinearLayout>
+
+
         </LinearLayout>
 
 </androidx.cardview.widget.CardView>

@@ -39,8 +39,8 @@ class MainActivity : AppCompatActivity() {
         service = retrofit.create<PlaceHolderApi>(PlaceHolderApi::class.java)
 
         val txtId:EditText=findViewById(R.id.txtId)
-        val btnConsultar:Button=findViewById(R.id.btnConsult)
 
+        val btnConsultar:Button=findViewById(R.id.btnConsult)
         btnConsultar.setOnClickListener() {
             getPostId(txtId.text.toString().toInt())
             txtId.text.clear()
@@ -61,8 +61,9 @@ class MainActivity : AppCompatActivity() {
         btnList.setOnClickListener(){
             val intent=Intent(this, ViewListado::class.java)
             startActivity(intent)
-           // if(s)
+
         }
+
     }
 
 

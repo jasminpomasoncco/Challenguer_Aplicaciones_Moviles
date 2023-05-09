@@ -22,6 +22,7 @@ class ViewListado : AppCompatActivity() {
 
         val recycler:RecyclerView=findViewById(R.id.recyclerPost)
 
+
         GlobalScope.launch(Dispatchers.IO){
             Lista=appDb.postDao().getAll()
 
